@@ -19,14 +19,14 @@
 <script>
 pannellum.viewer('panorama', {   
     "default": {
-        "firstScene": "circle",
+        "firstScene": "p1",
         "author": "Clara Miranda",
         "sceneFadeDuration": 1000
     },
 
     "scenes": {
-        "circle": {
-            "title": "Ambiente",
+        "p1": {
+            "title": "Hall",
             "hfov": 110,
             "pitch": -3,
             "yaw": 117,
@@ -37,14 +37,14 @@ pannellum.viewer('panorama', {
                     "pitch": -2.1,
                     "yaw": 132.9,
                     "type": "scene",
-                    "text": "Spring House or Dairy",
-                    "sceneId": "house"
+                    "text": "Hall de entrada da casa",
+                    "sceneId": "p2"
                 }
             ]
         },
 
-        "house": {
-            "title": "Spring House or Dairy",
+        "p2": {
+            "title": "Sala de estar",
             "hfov": 110,
             "yaw": 5,
             "type": "equirectangular",
@@ -54,8 +54,25 @@ pannellum.viewer('panorama', {
                     "pitch": -0.6,
                     "yaw": 37.1,
                     "type": "scene",
-                    "text": "Mason Circle",
-                    "sceneId": "circle",
+                    "text": "Sala de jantar",
+                    "sceneId": "p3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                
+            "p3": {
+            "title": "Sala de jantar",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "p3.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 37.1,
+                    "type": "scene",
+                    "text": "Sala de estar",
+                    "sceneId": "p2",
                     "targetYaw": -23,
                     "targetPitch": 2
                 }
