@@ -1,122 +1,90 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour Virtual 360°</title>
-    <script type="text/javascript" src="https://pannellum.org/js/pannellum.js"></script>
-    <link rel="stylesheet" href="https://pannellum.org/css/pannellum.css">
-    <style>
-        #panorama {
-            width: 100%;
-            height: 100vh;
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clara Miranda - Atualização</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        margin-left: -1vw;
+        margin-top:-1vh;
+        width: 100%;
+        height: 100vh;
+    }
+    </style>
 </head>
 <body>
-    <div id="panorama"></div> 
 
-    <script>
-        pannellum.viewer('panorama', {
-            "default": {
-                "firstScene": "scene1",
-                "sceneFadeDuration": 1000,
-                "autoLoad": true
-            },
-            "scenes": {
-                "scene1": {
-                    "title": "Cena 1",
-                    "type": "equirectangular",
-                    "panorama": "p1.jpg",
-                    "hotSpots": [
-                        {
-                            "pitch": 0,
-                            "yaw": 90,
-                            "type": "scene",
-                            "text": "Ir para Cena 2",
-                            "sceneId": "scene2"
-                        }
-                    ]
-                },
-                "scene2": {
-                    "title": "Cena 2",
-                    "type": "equirectangular",
-                    "panorama": "p2.jpg",
-                    "hotSpots": [
-                        {
-                            "pitch": 0,
-                            "yaw": 180,
-                            "type": "scene",
-                            "text": "Voltar para Cena 1",
-                            "sceneId": "scene1"
-                        },
-                        {
-                            "pitch": 0,
-                            "yaw": 90,
-                            "type": "scene",
-                            "text": "Ir para Cena 3",
-                            "sceneId": "scene3"
-                        }
-                    ]
-                },
-                "scene3": {
-                    "title": "Cena 3",
-                    "type": "equirectangular",
-                    "panorama": "p3.jpg",
-                    "hotSpots": [
-                        {
-                            "pitch": 0,
-                            "yaw": 180,
-                            "type": "scene",
-                            "text": "Voltar para Cena 2",
-                            "sceneId": "scene2"
-                        },
-                        {
-                            "pitch": 0,
-                            "yaw": 90,
-                            "type": "scene",
-                            "text": "Ir para Cena 4",
-                            "sceneId": "scene4"
-                        }
-                    ]
-                },
-                "scene4": {
-                    "title": "Cena 4",
-                    "type": "equirectangular",
-                    "panorama": "p4.jpg",
-                    "hotSpots": [
-                        {
-                            "pitch": 0,
-                            "yaw": 180,
-                            "type": "scene",
-                            "text": "Voltar para Cena 3",
-                            "sceneId": "scene3"
-                        },
-                        {
-                            "pitch": 0,
-                            "yaw": 90,
-                            "type": "scene",
-                            "text": "Ir para Cena 5",
-                            "sceneId": "scene5"
-                        }
-                    ]
-                },
-                "scene5": {
-                    "title": "Cena 5",
-                    "type": "equirectangular",
-                    "panorama": "p5.jpg",
-                    "hotSpots": [
-                        {
-                            "pitch": 0,
-                            "yaw": 180,
-                            "type": "scene",
-                            "text": "Voltar para Cena 4",
-                            "sceneId": "scene4"
-                        }
-                    ]
-                }
-            }
-        });
-    </script>
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "p1",
+        "author": "Clara Miranda",
+        "sceneFadeDuration": 1000
+    },
+
+    "scenes": {
+        "p1": {
+            "title": "Hall",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "p1.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -2.1,
+                    "yaw": 132.9,
+                    "type": "scene",
+                    "text": "Hall de entrada da casa",
+                    "sceneId": "p2"
+                }
+            ]
+        },
+
+        "p2": {
+            "title": "Sala de estar",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "p2.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 37.1,
+                    "type": "scene",
+                    "text": "Sala de jantar",
+                    "sceneId": "p3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+       
+        "p3": {
+            "title": "Sala de jantar",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "p3.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 37.1,
+                    "type": "scene",
+                    "text": "Sala de estar",
+                    "sceneId": "p2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        } 
+    }
+});
+</script>
+
 </body>
 </html>
