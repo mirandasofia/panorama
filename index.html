@@ -1,23 +1,22 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="pt">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clara Miranda - Update</title>
+    <title>Clara Miranda - Tour Virtual</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <style>
-    #panorama {
-        margin-left: -1vw;
-        margin-top:-1vh;
-        width: 100%;
-        height: 100vh;
-    }
+        #panorama {
+            width: 100%;
+            height: 100vh;
+        }
     </style>
 </head>
 <body>
 
 <div id="panorama"></div>
+
 <script>
 pannellum.viewer('panorama', {   
     "default": {
@@ -32,8 +31,15 @@ pannellum.viewer('panorama', {
             "hfov": 110,
             "pitch": -3,
             "yaw": 117,
-            "type": "equirectangular",
-            "panorama": "p0.jpg",
+            "type": "multires",
+            "multiRes": {
+                "basePath": "tiles/p0",
+                "path": "/%l/%y/%x.jpg",
+                "fallbackPath": "/fallback.jpg",
+                "tileResolution": 512,
+                "maxLevel": 5,
+                "cubeResolution": 4096
+            },
             "hotSpots": [
                 {
                     "pitch": -2.1,
@@ -49,88 +55,56 @@ pannellum.viewer('panorama', {
             "title": "Sala de estar",
             "hfov": 110,
             "yaw": 5,
-            "type": "equirectangular",
-            "panorama": "p1.jpg",
+            "type": "multires",
+            "multiRes": {
+                "basePath": "tiles/p1",
+                "path": "/%l/%y/%x.jpg",
+                "fallbackPath": "/fallback.jpg",
+                "tileResolution": 512,
+                "maxLevel": 5,
+                "cubeResolution": 4096
+            },
             "hotSpots": [
                 {
                     "pitch": -0.6,
                     "yaw": 37.1,
                     "type": "scene",
                     "text": "Sala de jantar",
-                    "sceneId": "p2",
-                    "targetYaw": -23,
-                    "targetPitch": 2
-                }
-            ],
-            "hotSpots2": [
+                    "sceneId": "p2"
+                },
                 {
                     "pitch": 0.6,
                     "yaw": -37.1,
                     "type": "scene",
                     "text": "Hall de entrada",
-                    "sceneId": "p0",
-                    "targetYaw": 23,
-                    "targetPitch": 2
+                    "sceneId": "p0"
                 }
             ]
         },
-       
+
         "p2": {
             "title": "Sala de jantar",
             "hfov": 110,
             "yaw": 5,
-            "type": "equirectangular",
-            "panorama": "p2.jpg",
+            "type": "multires",
+            "multiRes": {
+                "basePath": "tiles/p2",
+                "path": "/%l/%y/%x.jpg",
+                "fallbackPath": "/fallback.jpg",
+                "tileResolution": 512,
+                "maxLevel": 5,
+                "cubeResolution": 4096
+            },
             "hotSpots": [
                 {
                     "pitch": -0.6,
                     "yaw": 37.1,
                     "type": "scene",
                     "text": "Escada",
-                    "sceneId": "p3",
-                    "targetYaw": -23,
-                    "targetPitch": 2
+                    "sceneId": "p3"
                 }
             ]
-        },
-
-        "p3": {
-            "title": "Escada",
-            "hfov": 110,
-            "yaw": 5,
-            "type": "equirectangular",
-            "panorama": "p3.jpg",
-            "hotSpots": [
-                {
-                    "pitch": -0.6,
-                    "yaw": 37.1,
-                    "type": "scene",
-                    "text": "Hall privativo",
-                    "sceneId": "p4",
-                    "targetYaw": -23,
-                    "targetPitch": 2
-                }
-            ]
-        },
-
-        "p4": {
-            "title": "Hall privativo",
-            "hfov": 110,
-            "yaw": 5,
-            "type": "equirectangular",
-            "panorama": "p4.jpg",
-            "hotSpots": [
-                {
-                    "pitch": -0.6,
-                    "yaw": 37.1,
-                    "type": "scene",
-                    "text": "Sala de estar",
-                    "sceneId": "p3",
-                    "targetYaw": -23,
-                    "targetPitch": 2
-                }
-            ]
-        } 
+        }
     }
 });
 </script>
