@@ -33,21 +33,15 @@ pannellum.viewer('panorama', {
             "yaw": 117,
             "type": "multires",
             "multiRes": {
-                "basePath": "tiles/p0",
-                "path": "/%l/%y/%x.jpg",
-                "fallbackPath": "/fallback.jpg",
+                "basePath": "tiles/p1",
+                "path": "%l/%y/%x.jpg",
+                "fallbackPath": "fallback.jpg",
                 "tileResolution": 512,
                 "maxLevel": 5,
                 "cubeResolution": 4096
             },
             "hotSpots": [
-                {
-                    "pitch": -2.1,
-                    "yaw": 132.9,
-                    "type": "scene",
-                    "text": "Sala de estar",
-                    "sceneId": "p2"
-                }
+                { "pitch": -2.1, "yaw": 132.9, "type": "scene", "text": "Sala de estar", "sceneId": "p2" }
             ]
         },
 
@@ -57,28 +51,16 @@ pannellum.viewer('panorama', {
             "yaw": 5,
             "type": "multires",
             "multiRes": {
-                "basePath": "tiles/p1",
-                "path": "/%l/%y/%x.jpg",
-                "fallbackPath": "/fallback.jpg",
+                "basePath": "tiles/p2",
+                "path": "%l/%y/%x.jpg",
+                "fallbackPath": "fallback.jpg",
                 "tileResolution": 512,
                 "maxLevel": 5,
                 "cubeResolution": 4096
             },
             "hotSpots": [
-                {
-                    "pitch": -0.6,
-                    "yaw": 37.1,
-                    "type": "scene",
-                    "text": "Sala de jantar",
-                    "sceneId": "p3"
-                },
-                {
-                    "pitch": 0.6,
-                    "yaw": -37.1,
-                    "type": "scene",
-                    "text": "Hall de entrada",
-                    "sceneId": "p0"
-                }
+                { "pitch": -0.6, "yaw": 37.1, "type": "scene", "text": "Sala de jantar", "sceneId": "p3" },
+                { "pitch": 0.6, "yaw": -37.1, "type": "scene", "text": "Hall de entrada", "sceneId": "p1" }
             ]
         },
 
@@ -88,21 +70,51 @@ pannellum.viewer('panorama', {
             "yaw": 5,
             "type": "multires",
             "multiRes": {
-                "basePath": "tiles/p2",
-                "path": "/%l/%y/%x.jpg",
-                "fallbackPath": "/fallback.jpg",
+                "basePath": "tiles/p3",
+                "path": "%l/%y/%x.jpg",
+                "fallbackPath": "fallback.jpg",
                 "tileResolution": 512,
                 "maxLevel": 5,
                 "cubeResolution": 4096
             },
             "hotSpots": [
-                {
-                    "pitch": -0.6,
-                    "yaw": 37.1,
-                    "type": "scene",
-                    "text": "Escada",
-                    "sceneId": "p3"
-                }
+                { "pitch": -0.6, "yaw": 37.1, "type": "scene", "text": "Escada", "sceneId": "p4" }
+            ]
+        },
+
+        "p4": {
+            "title": "Escada",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "multires",
+            "multiRes": {
+                "basePath": "tiles/p4",
+                "path": "%l/%y/%x.jpg",
+                "fallbackPath": "fallback.jpg",
+                "tileResolution": 512,
+                "maxLevel": 5,
+                "cubeResolution": 4096
+            },
+            "hotSpots": [
+                { "pitch": -0.6, "yaw": 37.1, "type": "scene", "text": "Quarto", "sceneId": "p5" }
+            ]
+        },
+
+        "p5": {
+            "title": "Quarto",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "multires",
+            "multiRes": {
+                "basePath": "tiles/p5",
+                "path": "%l/%y/%x.jpg",
+                "fallbackPath": "fallback.jpg",
+                "tileResolution": 512,
+                "maxLevel": 5,
+                "cubeResolution": 4096
+            },
+            "hotSpots": [
+                { "pitch": -0.6, "yaw": 37.1, "type": "scene", "text": "Escada", "sceneId": "p4" }
             ]
         }
     }
